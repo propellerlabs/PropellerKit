@@ -10,6 +10,10 @@
 		E37C5E331E453E5A00159A29 /* PropellerKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E37C5E291E453E5A00159A29 /* PropellerKit.framework */; };
 		E37C5E381E453E5A00159A29 /* PropellerKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37C5E371E453E5A00159A29 /* PropellerKitTests.swift */; };
 		E37C5E3A1E453E5A00159A29 /* PropellerKit.h in Headers */ = {isa = PBXBuildFile; fileRef = E37C5E2C1E453E5A00159A29 /* PropellerKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E37C5E461E45406E00159A29 /* PropellerController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E37C5E431E45406E00159A29 /* PropellerController.framework */; };
+		E37C5E471E45406E00159A29 /* PropellerNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E37C5E441E45406E00159A29 /* PropellerNetwork.framework */; };
+		E37C5E481E45406E00159A29 /* PropellerPromise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E37C5E451E45406E00159A29 /* PropellerPromise.framework */; };
+		E37C5E4C1E45447E00159A29 /* JSONCodable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E37C5E4B1E45447E00159A29 /* JSONCodable.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +33,10 @@
 		E37C5E321E453E5A00159A29 /* PropellerKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PropellerKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E37C5E371E453E5A00159A29 /* PropellerKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropellerKitTests.swift; sourceTree = "<group>"; };
 		E37C5E391E453E5A00159A29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E37C5E431E45406E00159A29 /* PropellerController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PropellerController.framework; path = Carthage/Build/iOS/PropellerController.framework; sourceTree = "<group>"; };
+		E37C5E441E45406E00159A29 /* PropellerNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PropellerNetwork.framework; path = Carthage/Build/iOS/PropellerNetwork.framework; sourceTree = "<group>"; };
+		E37C5E451E45406E00159A29 /* PropellerPromise.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PropellerPromise.framework; path = Carthage/Build/iOS/PropellerPromise.framework; sourceTree = "<group>"; };
+		E37C5E4B1E45447E00159A29 /* JSONCodable.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JSONCodable.framework; path = Carthage/Build/iOS/JSONCodable.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +44,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E37C5E4C1E45447E00159A29 /* JSONCodable.framework in Frameworks */,
+				E37C5E461E45406E00159A29 /* PropellerController.framework in Frameworks */,
+				E37C5E471E45406E00159A29 /* PropellerNetwork.framework in Frameworks */,
+				E37C5E481E45406E00159A29 /* PropellerPromise.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +67,7 @@
 			children = (
 				E37C5E2B1E453E5A00159A29 /* PropellerKit */,
 				E37C5E361E453E5A00159A29 /* PropellerKitTests */,
+				E37C5E491E45407C00159A29 /* Frameworks */,
 				E37C5E2A1E453E5A00159A29 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -74,7 +87,8 @@
 				E37C5E2C1E453E5A00159A29 /* PropellerKit.h */,
 				E37C5E2D1E453E5A00159A29 /* Info.plist */,
 			);
-			path = PropellerKit;
+			name = PropellerKit;
+			path = Source;
 			sourceTree = "<group>";
 		};
 		E37C5E361E453E5A00159A29 /* PropellerKitTests */ = {
@@ -83,7 +97,19 @@
 				E37C5E371E453E5A00159A29 /* PropellerKitTests.swift */,
 				E37C5E391E453E5A00159A29 /* Info.plist */,
 			);
-			path = PropellerKitTests;
+			name = PropellerKitTests;
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		E37C5E491E45407C00159A29 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E37C5E4B1E45447E00159A29 /* JSONCodable.framework */,
+				E37C5E431E45406E00159A29 /* PropellerController.framework */,
+				E37C5E441E45406E00159A29 /* PropellerNetwork.framework */,
+				E37C5E451E45406E00159A29 /* PropellerPromise.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -108,6 +134,7 @@
 				E37C5E251E453E5A00159A29 /* Frameworks */,
 				E37C5E261E453E5A00159A29 /* Headers */,
 				E37C5E271E453E5A00159A29 /* Resources */,
+				E37C5E4A1E4540A700159A29 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -190,6 +217,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E37C5E4A1E4540A700159A29 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Cathage/Build/iOS/PropellerController.framework",
+				"$(SRCROOT)/Cathage/Build/iOS/PropellerNetwork.framework",
+				"$(SRCROOT)/Cathage/Build/iOS/PropellerPromise.framework",
+				"$(SRCROOT)/Cathage/Build/iOS/JSONCodable.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E37C5E241E453E5A00159A29 /* Sources */ = {
@@ -325,7 +372,11 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = PropellerKit/Info.plist;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.propellerlabs.PropellerKit;
@@ -343,7 +394,11 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = PropellerKit/Info.plist;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.propellerlabs.PropellerKit;
