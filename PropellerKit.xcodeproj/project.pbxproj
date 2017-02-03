@@ -65,8 +65,8 @@
 		E37C5E1F1E453E5A00159A29 = {
 			isa = PBXGroup;
 			children = (
-				E37C5E2B1E453E5A00159A29 /* PropellerKit */,
-				E37C5E361E453E5A00159A29 /* PropellerKitTests */,
+				E37C5E2B1E453E5A00159A29 /* Source */,
+				E37C5E361E453E5A00159A29 /* Tests */,
 				E37C5E491E45407C00159A29 /* Frameworks */,
 				E37C5E2A1E453E5A00159A29 /* Products */,
 			);
@@ -81,23 +81,21 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E37C5E2B1E453E5A00159A29 /* PropellerKit */ = {
+		E37C5E2B1E453E5A00159A29 /* Source */ = {
 			isa = PBXGroup;
 			children = (
 				E37C5E2C1E453E5A00159A29 /* PropellerKit.h */,
 				E37C5E2D1E453E5A00159A29 /* Info.plist */,
 			);
-			name = PropellerKit;
 			path = Source;
 			sourceTree = "<group>";
 		};
-		E37C5E361E453E5A00159A29 /* PropellerKitTests */ = {
+		E37C5E361E453E5A00159A29 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 				E37C5E371E453E5A00159A29 /* PropellerKitTests.swift */,
 				E37C5E391E453E5A00159A29 /* Info.plist */,
 			);
-			name = PropellerKitTests;
 			path = Tests;
 			sourceTree = "<group>";
 		};
@@ -449,6 +447,7 @@
 				E37C5E3F1E453E5A00159A29 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E37C5E401E453E5A00159A29 /* Build configuration list for PBXNativeTarget "PropellerKitTests" */ = {
 			isa = XCConfigurationList;
@@ -457,6 +456,7 @@
 				E37C5E421E453E5A00159A29 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
