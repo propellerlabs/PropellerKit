@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52ED64671E4AA2990056D4EE /* ViewNibNestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ED64661E4AA2990056D4EE /* ViewNibNestable.swift */; };
+		52ED64691E4AA2E70056D4EE /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ED64681E4AA2E70056D4EE /* UIView+Extensions.swift */; };
 		E337D6FD1E455871009ECB20 /* PropellerNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E37C5E441E45406E00159A29 /* PropellerNetwork.framework */; };
 		E3698EDB1E454BD2002CBF37 /* WebService+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3698EDA1E454BD2002CBF37 /* WebService+Extension.swift */; };
 		E37198C51E4546E30063F37E /* WebService+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37198C41E4546E30063F37E /* WebService+Extension.swift */; };
@@ -53,6 +55,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		52ED64661E4AA2990056D4EE /* ViewNibNestable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewNibNestable.swift; sourceTree = "<group>"; };
+		52ED64681E4AA2E70056D4EE /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		E3698EDA1E454BD2002CBF37 /* WebService+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WebService+Extension.swift"; sourceTree = "<group>"; };
 		E37198C41E4546E30063F37E /* WebService+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WebService+Extension.swift"; sourceTree = "<group>"; };
 		E37C5E291E453E5A00159A29 /* PropellerKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PropellerKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				E37198C41E4546E30063F37E /* WebService+Extension.swift */,
+				52ED64681E4AA2E70056D4EE /* UIView+Extensions.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -134,6 +139,7 @@
 			children = (
 				E37198C31E4546BD0063F37E /* Extensions */,
 				E37C5E2C1E453E5A00159A29 /* PropellerKit.h */,
+				52ED64661E4AA2990056D4EE /* ViewNibNestable.swift */,
 				E37C5E2D1E453E5A00159A29 /* Info.plist */,
 			);
 			path = Source;
@@ -293,6 +299,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52ED64691E4AA2E70056D4EE /* UIView+Extensions.swift in Sources */,
+				52ED64671E4AA2990056D4EE /* ViewNibNestable.swift in Sources */,
 				E37198C51E4546E30063F37E /* WebService+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
