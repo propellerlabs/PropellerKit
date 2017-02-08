@@ -24,6 +24,11 @@
 		E3C0DE9D1E455B6600AFE18F /* PropellerController.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E37C5E431E45406E00159A29 /* PropellerController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E3C0DE9E1E455B6600AFE18F /* PropellerNetwork.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E37C5E441E45406E00159A29 /* PropellerNetwork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E3C0DE9F1E455B6600AFE18F /* PropellerPromise.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E37C5E451E45406E00159A29 /* PropellerPromise.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E3C0DEA11E49336B00AFE18F /* JSONCodable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C0DEA01E49336B00AFE18F /* JSONCodable+Extension.swift */; };
+		E3C0DEA31E49369800AFE18F /* Resource+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C0DEA21E49369800AFE18F /* Resource+Extension.swift */; };
+		E3FB07451E4BA2A20024F6B9 /* JSONCodable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FB07441E4BA2A20024F6B9 /* JSONCodable+Extension.swift */; };
+		E3FB07481E4BA5390024F6B9 /* HTTPBin.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FB07461E4BA2D90024F6B9 /* HTTPBin.swift */; };
+		E3FB074A1E4BABA00024F6B9 /* ResourceConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FB07491E4BABA00024F6B9 /* ResourceConfiguration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +70,11 @@
 		E37C5E441E45406E00159A29 /* PropellerNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PropellerNetwork.framework; path = Carthage/Build/iOS/PropellerNetwork.framework; sourceTree = "<group>"; };
 		E37C5E451E45406E00159A29 /* PropellerPromise.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PropellerPromise.framework; path = Carthage/Build/iOS/PropellerPromise.framework; sourceTree = "<group>"; };
 		E37C5E4B1E45447E00159A29 /* JSONCodable.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JSONCodable.framework; path = Carthage/Build/iOS/JSONCodable.framework; sourceTree = "<group>"; };
+		E3C0DEA01E49336B00AFE18F /* JSONCodable+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JSONCodable+Extension.swift"; sourceTree = "<group>"; };
+		E3C0DEA21E49369800AFE18F /* Resource+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Resource+Extension.swift"; sourceTree = "<group>"; };
+		E3FB07441E4BA2A20024F6B9 /* JSONCodable+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JSONCodable+Extension.swift"; sourceTree = "<group>"; };
+		E3FB07461E4BA2D90024F6B9 /* HTTPBin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPBin.swift; sourceTree = "<group>"; };
+		E3FB07491E4BABA00024F6B9 /* ResourceConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourceConfiguration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				E3698EDA1E454BD2002CBF37 /* WebService+Extension.swift */,
+				E3FB07441E4BA2A20024F6B9 /* JSONCodable+Extension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -106,6 +117,8 @@
 			isa = PBXGroup;
 			children = (
 				E37198C41E4546E30063F37E /* WebService+Extension.swift */,
+				E3C0DEA01E49336B00AFE18F /* JSONCodable+Extension.swift */,
+				E3C0DEA21E49369800AFE18F /* Resource+Extension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -144,6 +157,8 @@
 			children = (
 				E3698ED91E454BAF002CBF37 /* Extensions */,
 				E37C5E371E453E5A00159A29 /* PropellerKitTests.swift */,
+				E3FB07461E4BA2D90024F6B9 /* HTTPBin.swift */,
+				E3FB07491E4BABA00024F6B9 /* ResourceConfiguration.swift */,
 				E37C5E391E453E5A00159A29 /* Info.plist */,
 			);
 			path = Tests;
@@ -293,7 +308,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3C0DEA11E49336B00AFE18F /* JSONCodable+Extension.swift in Sources */,
 				E37198C51E4546E30063F37E /* WebService+Extension.swift in Sources */,
+				E3C0DEA31E49369800AFE18F /* Resource+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,8 +318,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3FB07481E4BA5390024F6B9 /* HTTPBin.swift in Sources */,
+				E3FB074A1E4BABA00024F6B9 /* ResourceConfiguration.swift in Sources */,
 				E3698EDB1E454BD2002CBF37 /* WebService+Extension.swift in Sources */,
 				E37C5E381E453E5A00159A29 /* PropellerKitTests.swift in Sources */,
+				E3FB07451E4BA2A20024F6B9 /* JSONCodable+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
