@@ -13,6 +13,8 @@ import PropellerPromise
 extension WebService {
     
     /// Request a `Resource<A>` by returning a Promise
+    /// - Parameters: 
+    ///     - resource: The `Resource<A>` to request
     /// - Returns: `Promise<A>`
     public static func request<A>(_ resource: Resource<A>) -> Promise<A> {
         let promise = Promise<A>()

@@ -12,6 +12,8 @@ import JSONCodable
 
 extension JSONDecodable {
     
+    /// Create a `Resource<A>` for a JSONCodable object passing in a default parse function to
+    /// map resource response to a `JSONCodable` object of Type
     public static func resource(configuration: PropellerNetwork.WebServiceConfiguration,
                   urlPath: String,
                   method: PropellerNetwork.HTTPMethod = .get,
@@ -30,6 +32,8 @@ extension JSONDecodable {
 
 extension Collection where Iterator.Element: JSONDecodable {
     
+    /// Create a `Resource<A>` for a JSONCodable object passing in a default parse function to
+    /// map resource response to an array of `JSONCodable` objects of Type
     public static func resource(configuration: PropellerNetwork.WebServiceConfiguration,
                   urlPath: String,
                   method: PropellerNetwork.HTTPMethod = .get,
