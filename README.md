@@ -9,4 +9,4 @@ github "propellerlabs/PropellerKit"
 ```
 
 ## Usage
-See documentation for [PropellerNetwork](https://propellerlabs.github.io/PropellerNetwork/), [PropellerController](https://propellerlabs.github.io/PropellerController/), [PropellerPromise](https://propellerlabs.github.io/PropellerPromise/)
+See documentation for [PropellerNetwork](https://propellerlabs.github.io/PropellerNetwork/), [PropellerController](https://propellerlabs.github.io/PropellerController/), and [PropellerPromise](https://propellerlabs.github.io/PropellerPromise/).
