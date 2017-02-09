@@ -19,7 +19,8 @@ extension JSONDecodable {
                   method: PropellerNetwork.HTTPMethod = .get,
                   parameters: Parameters? = nil,
                   headers: [String : String]? = nil,
-                  encoding: ParameterEncoding = JSONEncoder.default) -> Resource<Self> {
+                  encoding: ParameterEncoding = JSONEncoder.default,
+                  parseKeyPath: String? = nil) -> Resource<Self> {
         
         return Resource<Self>(configuration: configuration,
                         urlPath: urlPath, method: method,
@@ -28,7 +29,8 @@ extension JSONDecodable {
                         encoding: encoding,
                         parsing: { object in
                             do {
-                                return try Self.parseJsonType(json: object)
+                                return try Self.parseJsonType(json: object,
+                                                              keyPath: parseKeyPath)
                             } catch {
                                 throw error
                             }
@@ -37,6 +39,7 @@ extension JSONDecodable {
     }
 }
 
+/// `Iterator.Element` must be a `JSONDecodable` type
 extension Collection where Iterator.Element: JSONDecodable {
     
     /// Create a `Resource<A>` for a JSONCodable object passing in a default parse function to
@@ -46,7 +49,8 @@ extension Collection where Iterator.Element: JSONDecodable {
                   method: PropellerNetwork.HTTPMethod = .get,
                   parameters: Parameters? = nil,
                   headers: [String : String]? = nil,
-                  encoding: ParameterEncoding = JSONEncoder.default) -> Resource<[Self.Iterator.Element]> {
+                  encoding: ParameterEncoding = JSONEncoder.default,
+                  parseKeyPath: String? = nil) -> Resource<[Self.Iterator.Element]> {
         
         return Resource<[Self.Iterator.Element]>(configuration: configuration,
                         urlPath: urlPath,
@@ -56,7 +60,8 @@ extension Collection where Iterator.Element: JSONDecodable {
                         encoding: encoding,
                         parsing: { object in
                             do {
-                                return try Self.parseJsonArrayType(json: object)
+                                return try Self.parseJsonArrayType(json: object,
+                                                                   keyPath: parseKeyPath)
                             } catch {
                                 throw error
                             }
