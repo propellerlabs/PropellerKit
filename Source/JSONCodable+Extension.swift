@@ -13,10 +13,13 @@ import PropellerNetwork
 extension JSONDecodable {
     
     /// Parses `Any` into a `JSONCodable` object of Type
-    public static var parseJsonType: (Any) -> Self? {
-        return {
-            guard let json = $0 as? JSONObject else { return nil }
-            return try? Self(object: json)
+    public static func parseJsonType(json: Any) throws -> Self? {
+        guard let json = json as? JSONObject else { return nil }
+
+        do {
+            return try Self(object: json)
+        } catch {
+            throw error
         }
     }
 }
@@ -24,10 +27,12 @@ extension JSONDecodable {
 extension Collection where Iterator.Element: JSONDecodable {
     
     /// Parses `Any` into an array of `JSONCodable` objects of Type
-    public static var parseJsonArrayType: (Any) -> [Iterator.Element]? {
-        return {
-            guard let json = $0 as? [JSONObject] else { return nil }
-            return try? Array<Iterator.Element>(JSONArray: json)
+    public static func parseJsonArrayType(json: Any) throws -> [Iterator.Element]? {
+        guard let json = json as? [JSONObject] else { return nil }
+        do {
+            return try Array<Iterator.Element>(JSONArray: json)
+        } catch {
+            throw error
         }
     }
 }
