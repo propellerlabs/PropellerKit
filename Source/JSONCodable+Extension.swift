@@ -10,13 +10,19 @@ import Foundation
 import JSONCodable
 import PropellerNetwork
 
-enum JSONParseError: Error {
+/// Error set for when there is an error parsing `JSONObject`
+public enum JSONParseError: Error {
+    /// Could not cast object to `JSONObject`
     case jsonObjectUncastable
 }
 
 extension JSONDecodable {
     
-    /// Parses `Any` into a `JSONCodable` object of Type
+    /// Parses `Any` into a `JSONCodable` object of Type `A`
+    /// - Parameters:
+    ///     - json: JSON object to parse
+    ///     - keyPath: An optional `String` representing the keyPath to the desired JSON object to decode.
+    /// - Returns: `A`
     public static func parseJsonType(json: Any, keyPath: String? = nil) throws -> Self? {
         guard let json = json as? JSONObject else {
             throw JSONParseError.jsonObjectUncastable
@@ -44,7 +50,11 @@ extension JSONDecodable {
 
 extension Collection where Iterator.Element: JSONDecodable {
     
-    /// Parses `Any` into an array of `JSONCodable` objects of Type
+    /// Parses `Any` into an array of `JSONCodable` objects of Type `A`
+    /// - Parameters:
+    ///     - json: JSON object to parse
+    ///     - keyPath: An optional `String` representing the keyPath to the desired JSON object to decode.
+    /// - Returns: `A`
     public static func parseJsonArrayType(json: Any, keyPath: String? = nil) throws -> [Iterator.Element]? {
 
         // We are assuming that this is not a top level array if there is a keyPath provided
