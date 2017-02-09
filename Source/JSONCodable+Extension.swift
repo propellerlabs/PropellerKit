@@ -53,7 +53,7 @@ extension Collection where Iterator.Element: JSONDecodable {
     /// Parses `Any` into an array of `JSONCodable` objects of Type `A`
     /// - Parameters:
     ///     - json: JSON object to parse
-    ///     - keyPath: An optional `String` representing the keyPath to the desired JSON object to decode.
+    ///     - keyPath: An optional `String` representing the keyPath to the desired JSON object array to decode.
     /// - Returns: `A`
     public static func parseJsonArrayType(json: Any, keyPath: String? = nil) throws -> [Iterator.Element]? {
 
