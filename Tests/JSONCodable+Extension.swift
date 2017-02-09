@@ -27,9 +27,18 @@ class JSONCodableExtension: XCTestCase {
             return
         }
         
-        let user = User.parseJsonType(userJson as Any)
+        var user: User?
+        var parseError: Error?
+        
+        do {
+            user = try User.parseJsonType(json: userJson as Any)
+        } catch {
+            parseError = error
+        }
         
         XCTAssertNotNil(user)
+        XCTAssertNil(parseError)
+        
         XCTAssert(user?.name == "Roy")
     }
     
@@ -49,9 +58,17 @@ class JSONCodableExtension: XCTestCase {
             return
         }
         
-        let users = [User].parseJsonArrayType(usersJson as Any)
+        var users: [User]?
+        var parseError: Error?
+
+        do {
+            users = try [User].parseJsonArrayType(json: usersJson as Any)
+        } catch {
+            parseError = error
+        }
         
         XCTAssertNotNil(users)
+        XCTAssertNil(parseError)
         XCTAssert(users?[1].name == "Rich")
     }
     
