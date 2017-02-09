@@ -30,6 +30,14 @@
       <nav class="sidebar">
         <ul class="nav-groups">
           <li class="nav-group-name">
+            <a href="../Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/JSONParseError.html">JSONParseError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
             <a href="../Extensions.html">Extensions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
@@ -69,9 +77,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:ZvE12PropellerKitP11JSONCodable13JSONDecodable13parseJsonTypeFP_GSqx_"></a>
-                    <a name="//apple_ref/swift/Variable/parseJsonType" class="dashAnchor"></a>
-                    <a class="token" href="#/s:ZvE12PropellerKitP11JSONCodable13JSONDecodable13parseJsonTypeFP_GSqx_">parseJsonType</a>
+                    <a name="/s:ZFE12PropellerKitP11JSONCodable13JSONDecodable13parseJsonTypeFzT4jsonP_7keyPathGSqSS__GSqx_"></a>
+                    <a name="//apple_ref/swift/Method/parseJsonType(json:keyPath:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFE12PropellerKitP11JSONCodable13JSONDecodable13parseJsonTypeFzT4jsonP_7keyPathGSqSS__GSqx_">parseJsonType(json:keyPath:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -79,19 +87,61 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Parses <code>Any</code> into a <code>JSONCodable</code> object of Type</p>
+                        <p>Parses <code>Any</code> into a <code>JSONCodable</code> object of Type <code>A</code>
+- Parameters:
+    - json: JSON object to parse
+    - keyPath: An optional <code>String</code> representing the keyPath to the desired JSON object to decode.
+- Returns: <code>A</code></p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">parseJsonType</span><span class="p">:</span> <span class="p">(</span><span class="kt">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span><span class="p">?</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">parseJsonType</span><span class="p">(</span><span class="nv">json</span><span class="p">:</span> <span class="kt">Any</span><span class="p">,</span> <span class="nv">keyPath</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="k">Self</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>json</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>JSON object to parse</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>keyPath</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An optional <code>String</code> representing the keyPath to the desired JSON object to decode.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>A</code></p>
+
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/propellerlabs/PropellerKit/tree/master/Source/JSONCodable+Extension.swift#L16-L21">Show on GitHub</a>
+                        <a href="https://github.com/propellerlabs/PropellerKit/tree/master/Source/JSONCodable+Extension.swift#L26-L48">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -131,7 +181,7 @@ map resource response to a <code>JSONCodable</code> object of Type</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/propellerlabs/PropellerKit/tree/master/Source/Resource+Extension.swift#L17-L30">Show on GitHub</a>
+                        <a href="https://github.com/propellerlabs/PropellerKit/tree/master/Source/Resource+Extension.swift#L17-L37">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -141,7 +191,7 @@ map resource response to a <code>JSONCodable</code> object of Type</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2017 <a class="link" href="http://www.propellerlabs.co" target="_blank" rel="external">Propeller</a>. All rights reserved. (Last updated: 2017-02-08)</p>
+          <p>&copy; 2017 <a class="link" href="http://www.propellerlabs.co" target="_blank" rel="external">Propeller</a>. All rights reserved. (Last updated: 2017-02-09)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

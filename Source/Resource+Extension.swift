@@ -26,7 +26,14 @@ extension JSONDecodable {
                         parameters: parameters,
                         headers: headers,
                         encoding: encoding,
-                        parsing: Self.parseJsonType)
+                        parsing: { object in
+                            do {
+                                return try Self.parseJsonType(json: object)
+                            } catch {
+                                throw error
+                            }
+                        }
+        )
     }
 }
 
@@ -47,6 +54,13 @@ extension Collection where Iterator.Element: JSONDecodable {
                         parameters: parameters,
                         headers: headers,
                         encoding: encoding,
-                        parsing: Self.parseJsonArrayType)
+                        parsing: { object in
+                            do {
+                                return try Self.parseJsonArrayType(json: object)
+                            } catch {
+                                throw error
+                            }
+                        }
+        )
     }
 }
