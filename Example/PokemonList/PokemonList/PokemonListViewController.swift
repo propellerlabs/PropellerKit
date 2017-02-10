@@ -1,0 +1,69 @@
+//
+//  MasterViewController.swift
+//  PokemonList
+//
+//  Created by RGfox on 2/8/17.
+//  Copyright © 2017 Propeller. All rights reserved.
+//
+
+import UIKit
+import PropellerKit
+import PropellerNetwork
+
+class PokemonListViewController: UIViewController {
+
+    @IBOutlet weak var tableView: UITableView!
+    
+    lazy var tableController: TableController.PokemonControllerType = {
+       return TableController.pokemonList(self.tableView)
+    }()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        fetchPokemon()
+    }
+    
+    func configureTableController() {
+        tableController.didSelectCell = { [weak self] _, data, _ in
+            self?.selectedPath = data.path
+            self?.segueToPokeDetail()
+        }
+    }
+    
+    var layedOutSubviews = false
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        if !layedOutSubviews {
+            layedOutSubviews = true
+            fetchPokemon()
+            configureTableController()
+        }
+    }
+    
+    var selectedPath = ""
+    
+    func segueToPokeDetail() {
+        performSegue(withIdentifier: "seguePokemonDetail", sender: self)
+    }
+    
+    func fetchPokemon() {
+        WebService
+        .request(Pokemon.getList)
+        .complete { [weak self] list in
+            DispatchQueue.main.async {
+                self?.tableController.setDataSource(list)
+            }
+        }
+        .failure(WebServiceError.self) { error in
+            print(error.localizedDescription)
+            assert(false,"something terrible is wrong")
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let dest = segue.destination as? PokemonDetailViewController else {
+            return
+        }
+        dest.requestPath = selectedPath
+    }
+}
