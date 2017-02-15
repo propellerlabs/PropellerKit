@@ -12,11 +12,11 @@ import PropellerNetwork
 /// Network configuration for testing
 struct ResourceConfiguration {
     
-    //. Default successful configuration
+    /// Default successful configuration
     static var `default`: WebServiceConfiguration = {
         let additionalHeaders = ["Content-Type": "application/json"]
-        var credential = WebServiceConfigurationCredential(authHeaderKey: "Authorization")
-        credential.authAccessToken = "TestAccessToken"
+        var credential = HeaderRequestCredential(authKey: "Authorization")
+        credential.authToken = "TestAccessToken"
         return WebServiceConfiguration(basePath: "https://httpbin.org",
                                        additionalHeaders: additionalHeaders,
                                        credential: credential)
