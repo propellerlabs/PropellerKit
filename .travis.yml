@@ -1,3 +1,4 @@
 language: objective-c
 osx_image: xcode8.1
+before_script: carthage bootstrap --no-use-binaries
 script: xcodebuild clean build test -scheme PropellerKit -destination "platform=iOS Simulator,name=iPhone 6S"
