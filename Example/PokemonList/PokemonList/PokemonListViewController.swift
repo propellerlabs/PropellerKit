@@ -22,11 +22,22 @@ class PokemonListViewController: UIViewController {
         super.viewDidLoad()
         fetchPokemon()
     }
-    
+
+    func segueFor(data: Pokemon) {
+        selectedPath = data.path
+        segueToPokeDetail()
+    }
+
     func configureTableController() {
-        tableController.didSelectCell = { [weak self] _, data, _ in
-            self?.selectedPath = data.path
-            self?.segueToPokeDetail()
+
+        tableController
+            .didSelectCell = { [weak self] _, data, _ in
+            self?.segueFor(data: data)
+        }
+        tableController
+            .ofCell(type: PokeShortCell.self)
+            .didSelectCell = { [weak self] _, data, _ in
+            self?.segueFor(data: data)
         }
     }
     

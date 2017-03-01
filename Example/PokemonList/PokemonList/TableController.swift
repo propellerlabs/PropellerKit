@@ -19,9 +19,9 @@ struct TableController {
 
         controller.cellTypeForIndexData = { data, iPath in
             if data.name.characters.count > 7 {
-                return PokemonCell.cellTypeIdentifier
+                return PokemonCell.typeIdentifier
             } else {
-                return PokeShortCell.cellTypeIdentifier
+                return PokeShortCell.typeIdentifier
             }
         }
 
