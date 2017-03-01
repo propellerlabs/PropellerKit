@@ -11,6 +11,8 @@
 		5250E3E51E4D2A0000BA86A0 /* PropellerKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5250E3E31E4D29D400BA86A0 /* PropellerKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5250E3E71E4D2CF000BA86A0 /* PokemonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5250E3E61E4D2CF000BA86A0 /* PokemonDetailViewController.swift */; };
 		5250E3E91E4D323C00BA86A0 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5250E3E81E4D323C00BA86A0 /* UIImageView+Extension.swift */; };
+		5264982D1E66E38200AA9CEC /* PokeShortCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5264982B1E66E38200AA9CEC /* PokeShortCell.swift */; };
+		5264982E1E66E38200AA9CEC /* PokeShortCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5264982C1E66E38200AA9CEC /* PokeShortCell.xib */; };
 		528052B31E4D230500F59135 /* PokemonDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528052B21E4D230500F59135 /* PokemonDetail.swift */; };
 		528052B51E4D27F000F59135 /* PokemonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 528052B41E4D27F000F59135 /* PokemonView.xib */; };
 		528052B71E4D27FB00F59135 /* PokemonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528052B61E4D27FB00F59135 /* PokemonView.swift */; };
@@ -55,6 +57,8 @@
 		5250E3E31E4D29D400BA86A0 /* PropellerKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PropellerKit.framework; path = Carthage/Build/iOS/PropellerKit.framework; sourceTree = SOURCE_ROOT; };
 		5250E3E61E4D2CF000BA86A0 /* PokemonDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonDetailViewController.swift; sourceTree = "<group>"; };
 		5250E3E81E4D323C00BA86A0 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		5264982B1E66E38200AA9CEC /* PokeShortCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokeShortCell.swift; sourceTree = "<group>"; };
+		5264982C1E66E38200AA9CEC /* PokeShortCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PokeShortCell.xib; sourceTree = "<group>"; };
 		528052B21E4D230500F59135 /* PokemonDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonDetail.swift; sourceTree = "<group>"; };
 		528052B41E4D27F000F59135 /* PokemonView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PokemonView.xib; sourceTree = "<group>"; };
 		528052B61E4D27FB00F59135 /* PokemonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonView.swift; sourceTree = "<group>"; };
@@ -132,6 +136,8 @@
 				528052B61E4D27FB00F59135 /* PokemonView.swift */,
 				528554ED1E4D056300D98EDE /* PokemonCell.swift */,
 				528554EE1E4D056300D98EDE /* PokemonCell.xib */,
+				5264982B1E66E38200AA9CEC /* PokeShortCell.swift */,
+				5264982C1E66E38200AA9CEC /* PokeShortCell.xib */,
 				5285566E1E4BFAC100D5849D /* NetworkConfiguration.swift */,
 				528554EB1E4CFE3200D98EDE /* TableController.swift */,
 				52EF77CB1E4BF9BC002ABA7D /* PokemonListViewController.swift */,
@@ -209,6 +215,7 @@
 				528052B51E4D27F000F59135 /* PokemonView.xib in Resources */,
 				52EF77D31E4BF9BC002ABA7D /* Assets.xcassets in Resources */,
 				52EF77D11E4BF9BC002ABA7D /* Main.storyboard in Resources */,
+				5264982E1E66E38200AA9CEC /* PokeShortCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,6 +235,7 @@
 				52EF77CA1E4BF9BC002ABA7D /* AppDelegate.swift in Sources */,
 				528554EF1E4D056300D98EDE /* PokemonCell.swift in Sources */,
 				5285566F1E4BFAC200D5849D /* NetworkConfiguration.swift in Sources */,
+				5264982D1E66E38200AA9CEC /* PokeShortCell.swift in Sources */,
 				5250E3E71E4D2CF000BA86A0 /* PokemonDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

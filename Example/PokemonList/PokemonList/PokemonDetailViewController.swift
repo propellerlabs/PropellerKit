@@ -12,7 +12,6 @@ import PropellerNetwork
 
 final class PokemonDetailViewController: UIViewController {
     
-
     @IBOutlet weak var pokeView: PokemonView!
 
     var requestPath = ""
