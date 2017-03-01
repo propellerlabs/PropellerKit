@@ -13,7 +13,8 @@ import PropellerNetwork
 class PokemonListViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    
+    var selectedPath = ""
+
     lazy var tableController: TableController.PokemonControllerType = {
        return TableController.pokemonList(self.tableView)
     }()
@@ -21,6 +22,7 @@ class PokemonListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchPokemon()
+        configureTableController()
     }
 
     func segueFor(data: Pokemon) {
@@ -40,19 +42,7 @@ class PokemonListViewController: UIViewController {
             self?.segueFor(data: data)
         }
     }
-    
-    var layedOutSubviews = false
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        if !layedOutSubviews {
-            layedOutSubviews = true
-            fetchPokemon()
-            configureTableController()
-        }
-    }
-    
-    var selectedPath = ""
-    
+
     func segueToPokeDetail() {
         performSegue(withIdentifier: "seguePokemonDetail", sender: self)
     }
