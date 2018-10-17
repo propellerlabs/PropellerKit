@@ -1,4 +1,4 @@
 github "matthewcheok/JSONCodable" "3.0.1"
 github "propellerlabs/PropellerController" "1.0.5"
-github "propellerlabs/PropellerNetwork" "1.0.9"
+github "propellerlabs/PropellerNetwork" "1.1.0"
 github "propellerlabs/PropellerPromise" "1.0.2"

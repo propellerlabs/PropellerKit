@@ -1,4 +1,4 @@
-github "propellerlabs/PropellerNetwork" #~> 1.0.4
+github "propellerlabs/PropellerNetwork" #~> 1.1.0
 github "propellerlabs/PropellerController" #~> 1.0.1
 github "propellerlabs/PropellerPromise" #~> 1.0.0
 github "matthewcheok/JSONCodable" #~> 3.0.1
